@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dumpling Delights - All Dumplings, All Day</title>
+    <style>
+        /* Reset + base */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff8f0;
+            color: #4b3b2b;
+            line-height: 1.6;
+        }
+        a {
+            color: #bf5530;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* Header */
+        header {
+            background: #bf5530;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2.5rem;
+            font-family: 'Pacifico', cursive;
+            letter-spacing: 2px;
+            user-select: none;
+        }
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 40px 15px 60px;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #7a3e20;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #a36a4a;
+            margin-bottom: 25px;
+        }
+        .btn-primary {
+            background: #bf5530;
+            border: none;
+            padding: 12px 28px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+        }
+        .btn-primary:hover {
+            background: #a64524;
+        }
+        /* Menu Preview */
+        .menu {
+            background: #fff3e6;
+            margin: 40px 0;
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(191,85,48,0.2);
+        }
+        .menu h2 {
+            color: #7a3e20;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+        .menu-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .menu-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #5a3d2b;
+        }
+        /* Location and Contact */
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px 0 60px;
+            gap: 30px;
+        }
+        .info-box {
+            background: #fce9d4;
+            border-radius: 12px;
+            padding: 25px 20px;
+            box-shadow: 0 2px 8px rgba(191,85,48,0.15);
+            flex: 1 1 300px;
+            max-width: 400px;
+        }
+        .info-box h3 {
+            color: #7a3e20;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .info-box p {
+            font-size: 1.1rem;
+            color: #6b4a31;
+            margin-bottom: 8px;
+        }
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #7a3e20;
+        }
+        input, textarea {
+            padding: 8px 12px;
+            border: 2px solid #bf5530;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #4b3b2b;
+            resize: vertical;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #c7987b;
+        }
+        button[type="submit"] {
+            background: #bf5530;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background: #a64524;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+            color: #a36a4a;
+            border-top: 1px solid #bf5530;
+            user-select: none;
+        }
+        /* Responsive */
+        @media (min-width: 600px) {
+            .menu-list {
+                grid-template-columns: 1fr 1fr;
+            }
+            .info-section {
+                justify-content: center;
+                gap: 50px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>Dumpling Delights</header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>All Dumplings, All Day</h1>
+            <p>Discover a world of flavor with our unique dumpling creations — traditional, plant-based, and everything in between.</p>
+            <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
+        </section>
+
+        <section class="menu">
+            <h2>Featured Dumplings</h2>
+            <div class="menu-list">
+                <div class="menu-item">Pork & Ginger Dumplings</div>
+                <div class="menu-item">Shrimp Har Gow</div>
+                <div class="menu-item">Jackfruit & Mushroom (Vegetarian)</div>
+                <div class="menu-item">Spicy Tofu & Spinach (Plant-Based)</div>
+                <div class="menu-item">Classic Pork Soup Dumplings</div>
+                <div class="menu-item">Sweet Red Bean Dessert Dumplings</div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-box">
+                <h3>Visit Us</h3>
+                <p><strong>Address:</strong> 123 Dumpling St, Foodie City, FS 45678</p>
+                <p><strong>Hours:</strong> Mon-Sun: 11am - 10pm</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+            </div>
+            <div class="info-box" id="contact">
+                <h3>Contact Us</h3>
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name" />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email" />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+                <p id="formResponse" style="color:#7a3e20; font-weight:bold; margin-top:10px;"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Dumpling Delights. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const responseEl = document.getElementById('formResponse');
+            responseEl.textContent = '';
+
+            const formData = new FormData(event.target);
+            const data = {
+                name: formData.get('name').trim(),
+                email: formData.get('email').trim(),
+                message: formData.get('message').trim()
+            };
+
+            if(!data.name || !data.email || !data.message) {
+                responseEl.textContent = 'Please fill out all fields.';
+                return;
+            }
+            // Basic email pattern check
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailPattern.test(data.email)) {
+                responseEl.textContent = 'Please enter a valid email address.';
+                return;
+            }
+
+            // Here we would normally send data to backend or email service
+            // For this MVP, just simulate success
+            responseEl.style.color = '#3a6a35';
+            responseEl.textContent = 'Thank you for contacting Dumpling Delights! We will get back to you shortly.';
+
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>
